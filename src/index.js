@@ -2,9 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { App, serviceWorker } from './app';
-import { getAnalytics } from 'firebase/analytics';
 import { initializeApp } from 'firebase/app';
-import 'firebase/auth';
+import { initializeFirestore } from 'firebase/firestore';
 
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
@@ -20,8 +19,12 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const firebase = initializeApp(firebaseConfig);
+
+/**
+ * Firebase Firestore initializer
+ */
+export const db = initializeFirestore(firebase, {});
 
 // This is where the magic happens. React renders our App component
 // inside the div with the id "root"
