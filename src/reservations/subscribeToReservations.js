@@ -12,7 +12,6 @@ export const subscribeToReservations = (userId, callback) => {
         id: doc.id,
       });
     });
-    console.log(reservations);
 
     // Appending restaurant info to each reservation
     const populatedReservations = await mapAsync(
