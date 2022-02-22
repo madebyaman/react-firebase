@@ -4,6 +4,7 @@ import './index.css';
 import { App, serviceWorker } from './app';
 import { getAnalytics } from 'firebase/analytics';
 import { initializeApp } from 'firebase/app';
+import 'firebase/auth';
 
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';

@@ -21,3 +21,7 @@
   - ui: basic user interface components
   - util: utility methods
   - app: boilerplate for app
+
+## Tips
+
+- Segregate logic of firebase so as to avoid vendor lock-in. For example, don't call signIn method directly, but store it in some wrapper function.
