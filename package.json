@@ -2,6 +2,7 @@
   "name": "firebase-demo-app-starter",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://us-central1-reservation-fe876.cloudfunctions.net",
   "dependencies": {
     "@material-ui/core": "4.9.14",
     "@material-ui/lab": "4.0.0-alpha.53",
@@ -23,7 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "firebase deploy --only functions"
   },
   "eslintConfig": {
     "extends": "react-app"
